@@ -1,5 +1,5 @@
 # Global vars
-variable "site_hostname" {
+variable "site_address" {
   type = string
   description = "Address you want to be able to reach your site at"
 }
@@ -23,4 +23,16 @@ variable "github_account" {
 variable "github_repo" {
   type        = string
   description = "Name of the repo containing the Hugo site"
+}
+
+# Route 53 vars
+variable "domain" {
+  type        = string
+  description = "Name of the domain you own and would like the site to be hosted on"
+}
+
+variable "create_domain_zone" {
+  type        = bool
+  description = "Whether or not to create the public domain zone your site will be hosted on"
+  default     = true
 }
