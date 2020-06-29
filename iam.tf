@@ -1,8 +1,3 @@
-resource "aws_iam_service_linked_role" "lambda" {
-  aws_service_name = "lambda.amazonaws.com"
-  description      = "Basic execution role for lambda"
-}
-
 resource "aws_iam_role" "lambda" {
   name = "websiteLambdaExecution"
 
